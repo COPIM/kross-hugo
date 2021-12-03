@@ -54,6 +54,7 @@
         <div class="col-lg-10 mx-auto text-center">
           {{ with site.Data.homepage.about }}
           <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
+          <p class="font-secondary lead text-dark">{{.subcontent | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
           <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
@@ -98,7 +99,7 @@
 
   {{ if site.Data.homepage.outputs.enable }}
   {{ with site.Data.homepage.outputs }}
-  <!-- experience -->
+  <!-- outputs -->
   <section class="section">
     <div class="container">
       <div class="row justify-content-around">
@@ -121,9 +122,9 @@
   {{ end }}
   {{ end }}
 
-  {{ if site.Data.homepage.education.enable }}
-  {{ with site.Data.homepage.education }}
-  <!-- education -->
+  {{ if site.Data.homepage.publications.enable }}
+  {{ with site.Data.homepage.publications }}
+  <!-- reports -->
   <section class="section position-relative">
     <div class="container">
       <div class="row">
@@ -134,12 +135,12 @@
         <div class="col-lg-6 col-md-6 mb-80">
           <div class="d-flex">
             <div class="mr-lg-5 mr-3">
-              <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+              <i class="ti-book icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
             </div>
             <div>
               <p class="text-dark mb-1">{{.year}}</p>
               <h4>{{ .title }}</h4>
-              <p class="mb-0 text-light">{{.academy}}</p>
+              <a href="{{.url}}">{{.url}}</a>
             </div>
           </div>
         </div>
