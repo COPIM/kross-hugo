@@ -4,7 +4,7 @@
       {{ if site.Params.logo }}
       <img class="img-fluid" style="height: 60px;" src="{{ site.Params.logo | absURL }}" alt="{{site.Title}}">
       {{ else }}
-      <h3 class="text-white font-secondary">{{site.Title}}</h3>
+      <h3 class="text-dark font-secondary">{{site.Title}}</h3>
       {{ end }}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse text-center" id="navigation">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.BaseURL }}">{{ with site.Params.Home }} {{ . }} {{ end }}</a>
+          <a class="nav-link text-dark" href="{{ site.BaseURL }}">{{ with site.Params.Home }} {{ . }} {{ end }}</a>
         </li>
         {{ $current := . }}
         {{ range site.Menus.main }}
@@ -23,7 +23,7 @@
         {{ $active = or $active (eq .Name $current.Title) }}
         {{ if .HasChildren }}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link text-dark dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ .Name }}
           </a>
           <div class="dropdown-menu" >
@@ -34,7 +34,7 @@
         </li>
         {{ else }}
         <li class="nav-item {{ if $active }}active{{ end }}">
-          <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+          <a class="nav-link text-dark" href="{{ .URL | absURL }}">{{ .Name }}</a>
         </li>
         {{ end }}
         {{ end }}

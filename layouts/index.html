@@ -5,7 +5,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-11 mx-auto">
-          <h1 class="text-white font-secondary">{{ site.Data.homepage.banner.title | safeHTML }}</h1>
+          <h1 class="text-dark font-secondary">{{ site.Data.homepage.banner.title | safeHTML }}</h1>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@
     <!-- social icon -->
     <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
       {{ range site.Params.social }}
-      <li class="mb-3"><a class="text-white" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
+      <li class="mb-3"><a class="text-dark" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
       {{ end }}
     </ul>
     <!-- /social icon -->
@@ -57,7 +57,7 @@
           <p class="font-secondary lead text-dark">{{.subcontent | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
-          <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
+          <a href="{{ .URL | absURL }}" class="btn btn-transparent text-dark">{{.label}}</a>
           {{ end }}
           {{ end }}
           {{ end }}
@@ -220,16 +220,16 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <h2 class="section-title text-white mb-5">{{ .title | markdownify }}</h2>
+          <h2 class="section-title text-dark mb-5">{{ .title | markdownify }}</h2>
         </div>
         <div class="col-lg-10 mx-auto testimonial-slider">
           {{ range .item }}
           <!-- slider-item -->
           <div class="text-center testimonial-content">
             <!--<i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>-->
-            <p class="text-white mb-4">{{.content | markdownify}}</p>
+            <p class="text-dark mb-4">{{.content | markdownify}}</p>
             <!--<img class="img-fluid rounded-circle mb-4 d-inline-block" src="{{.image | absURL }}" alt="client-image">-->
-            <a href="/work-package/{{lower .designation }}"><h4 class="text-white">{{.name }}</h4></a>
+            <a href="/work-package/{{lower .designation }}"><h4 class="text-dark">{{.name }}</h4></a>
             <h6 class="text-light mb-4">{{ .designation }}</h6>
           </div>
           {{ end }}
