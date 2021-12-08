@@ -764,6 +764,14 @@ blockquote {
   line-height: 1.5
 }
 
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+    text-align: center;
+}
+
 .page-title-alt {
   padding: 350px 0 70px
 }
