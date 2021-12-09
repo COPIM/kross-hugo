@@ -17,3 +17,24 @@
   <img src="{{`images/illustrations/leaf-cyan-lg.svg`| relURL}}" alt="illustrations" class="bg-shape-7">-->
 </section>
 <!-- /page title -->
+
+<!-- main content -->
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 text-center mb-4">
+          <img src="{{.Params.image | absURL }}" alt="{{.Params.image_alt_text}}" class="img-fluid rounded">
+          <!--<p class="font-secondary">Published on {{ .PublishDate.Format "Jan 02, 2006" }} by <span class="text-primary">{{site.Params.Author}}</span></p>-->
+          {{ if .Params.image_credit }}
+          <p class="font-tertiary">Image credit: {{ .Params.image_credit | markdownify }}</p>
+          {{ end }}
+        </div>
+        <div class="col-lg-9">
+          <div class="content">
+            {{.Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- /main content -->

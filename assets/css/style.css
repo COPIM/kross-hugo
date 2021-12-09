@@ -338,6 +338,13 @@ a:hover {
   font-weight: 700 !important;
 }
 
+.font-tertiary {
+  font-family: Lato, sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 14px;
+}
+
 .shadow {
   box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, .34) !important
 }
