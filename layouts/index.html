@@ -39,7 +39,13 @@
     <!-- social icon -->
     <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
       {{ range site.Params.social }}
-      <li class="mb-3"><a class="text-dark" href="{{.URL | safeURL }}"><i class="{{.icon}}"></i></a></li>
+      <li class="mb-3">
+          <a class="text-dark" href="{{.URL | safeURL }}">
+              <i class="{{.icon}}" aria-hidden="true">
+              <span class="sr-only">{{.name}}</span>
+              </i>
+          </a>
+      </li>
       {{ end }}
     </ul>
     <!-- /social icon -->
@@ -109,10 +115,10 @@
         {{ range .item }}
         <div class="col-lg-3 col-md-4 text-center">
           <a href="{{.url}}">
-            <img class="img-fluid" src="{{.logo | relURL }}" alt="icon">
+            <img class="img-fluid" src="{{.logo | relURL }}" alt="{{.title}} logo">
           </a>
           <h4>{{.title }}</h4>
-          <h6 class="text-light">{{.subtitle }}</h6>
+          <h6 class="text-dark">{{.subtitle }}</h6>
         </div>
         {{ end }}
       </div>
@@ -140,7 +146,7 @@
             <div>
               <p class="text-dark mb-1">{{.year}}</p>
               <h4>{{ .title }}</h4>
-              <a href="{{.url}}">{{.url}}</a>
+              <a href="{{.url}}" class="text-dark">{{.url}}</a>
             </div>
           </div>
         </div>
@@ -148,7 +154,7 @@
       </div>
     </div>
     <!-- bg image -->
-    <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="bg-image">
+    <img class="img-fluid edu-bg-image w-100" src="{{`images/backgrounds/education-bg.png`|relURL}}" alt="wavey background image">
   </section>
   <!-- /education -->
   {{ end }}
@@ -230,7 +236,7 @@
             <p class="text-dark mb-4">{{.content | markdownify}}</p>
             <!--<img class="img-fluid rounded-circle mb-4 d-inline-block" src="{{.image | absURL }}" alt="client-image">-->
             <a href="/work-package/{{lower .designation }}"><h4 class="text-dark">{{.name }}</h4></a>
-            <h6 class="text-light mb-4">{{ .designation }}</h6>
+            <h6 class="text-dark mb-4">{{ .designation }}</h6>
           </div>
           {{ end }}
         </div>
