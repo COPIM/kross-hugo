@@ -379,14 +379,14 @@ a:hover {
 }
 
 .slick-dots li.slick-active button {
-  background: #fff;
+  background: rgba(0, 0, 0, .5);
   width: 25px
 }
 
 .slick-dots li button {
   height: 6px;
   width: 12px;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(0, 0, 0, .5);
   color: transparent;
   border-radius: 10px;
   overflow: hidden;
