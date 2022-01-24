@@ -169,8 +169,8 @@ body {
 
 ol,
 ul {
-  list-style-type: none;
-  margin: 0
+  list-style-type: circle;
+  margin: 1rem;
 }
 
 img {
@@ -701,9 +701,9 @@ textarea.form-control {
   bottom: -50px
 }
 
-.footer-section {
+/*.footer-section {
   padding-top: 200px
-}
+}*/
 
 .footer-section a {
   color: #fff;
@@ -939,4 +939,25 @@ blockquote {
 
 .project-meta p{
   margin-bottom: 0;
+}
+
+summary {
+  color: #000;
+  font-family: Lato, sans-serif;
+  line-height: 1.2;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+details {
+  font-weight: 400;
+  color: #4c4c4c;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: Lato,sans-serif;
+  margin-bottom: 20px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: var(--highlight-colour);
 }
