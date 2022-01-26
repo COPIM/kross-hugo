@@ -236,7 +236,7 @@
             <p class="text-dark mb-4">{{.content | markdownify}}</p>
             <!--<img class="img-fluid rounded-circle mb-4 d-inline-block" src="{{.image | absURL }}" alt="client-image">-->
             <a href="/work-package/{{lower .designation }}"><h4 class="text-dark">{{.name }}</h4></a>
-            <h6 class="text-dark mb-4">{{ .designation }}</h6>
+            <a href="/work-package/{{lower .designation }}"><h6 class="text-dark mb-4">{{ .designation }}</h6></a>
           </div>
           {{ end }}
         </div>
