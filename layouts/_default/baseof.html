@@ -7,10 +7,10 @@
 <body>
 	{{ with .Site.Data.myvars.edit }}
 		<div class="container shadow-bottom bg-gray">
-			<a href="{{ $gitUrl }}/_edit/master/content/{{ $filePath }}">edit_this_page</a>
-			<a href="{{ $gitUrl }}/_new/master/{{ $filePath.Dir }}">{{ $filePath.Dir }}add_new_page</a>
-			<a href="{{ $gitUrl }}/_new/master/content">add_new_page</a>
-			<a href="{{ $gitUrl }}/_edit/master/PUBLISH.trigger.md">publish</a>
+			<a class="btn" href="{{ $gitUrl }}/_edit/kross/content/{{ $filePath }}">edit_this_page</a>
+			<a class="btn" href="{{ $gitUrl }}/_new/kross/{{ $filePath.Dir }}">{{ $filePath.Dir }}add_new_page</a>
+			<a class="btn" href="{{ $gitUrl }}/_new/kross/content">add_new_page</a>
+			<a class="btn" href="{{ $gitUrl }}/_edit/kross/PUBLISH.trigger.md">publish</a>
 		</div>
 	{{ end }}
 	{{- partial "preloader.html" . -}}
