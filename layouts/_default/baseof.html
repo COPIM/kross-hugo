@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+{{- $gitUrl := .Site.Data.myvars.giturl -}}
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 {{- partial "head.html" . -}}
 
 <body>
+	{{ with .Site.Data.myvars.edit }}
+		<div class="container shadow-bottom bg-gray">
+			<a class="btn" href="{{ $gitUrl }}/_edit/master/content/{{ $filePath }}">edit_this_page</a>
+					<a class="btn" href="{{ $gitUrl }}/_new/master/{{ $filePath.Dir }}">{{ $filePath.Dir }}add_new_page</a>
+					<a class="btn" href="{{ $gitUrl }}/_new/master/content">add_new_page</a>
+					<a class="btn" href="{{ $gitUrl }}/_edit/master/PUBLISH.trigger.md">publish</a>
+		</div>
+	{{ end }}
 	{{- partial "preloader.html" . -}}
 	{{- partial "header.html" . -}}
 	{{- block "main" . }}{{- end }}
