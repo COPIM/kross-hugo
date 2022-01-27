@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{{- $filePath := .File -}}
 {{- $gitUrl := .Site.Data.myvars.giturl -}}
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 {{- partial "head.html" . -}}
