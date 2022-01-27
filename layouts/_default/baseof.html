@@ -4,15 +4,15 @@
 <html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 {{- partial "head.html" . -}}
 
-{{ with .Site.Data.myvars.edit }}
+<body>
+	{{ with .Site.Data.myvars.edit }}
 	<div class="container shadow-bottom bg-gray">
 		<a class="btn" href="{{ $gitUrl }}/_edit/kross/content/{{ $filePath }}">edit_this_page</a>
 		<a class="btn" href="{{ $gitUrl }}/_new/kross/{{ $filePath.Dir }}">{{ $filePath.Dir }}add_new_page</a>
 		<a class="btn" href="{{ $gitUrl }}/_new/kross/content">add_new_page</a>
 		<a class="btn" href="{{ $gitUrl }}/_edit/kross/PUBLISH.trigger.md">publish</a>
 	</div>
-{{ end }}
-<body>
+	{{ end }}
 	{{- partial "preloader.html" . -}}
 	{{- partial "header.html" . -}}
 	{{- block "main" . }}{{- end }}
