@@ -424,13 +424,13 @@ textarea.form-control {
 }
 
 .navigation {
-  padding: 40px 130px;
+  padding: 15px 130px;
   transition: .3s ease
 }
 
 .navigation.nav-bg {
   background-color: var(--primary-color);
-  padding: 15px 100px
+  padding: 5px 5px
 }
 
 @media(max-width:991px) {
