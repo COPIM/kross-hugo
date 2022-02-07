@@ -763,12 +763,9 @@ blockquote {
 }
 
 .content strong {
-  font-family: Lato, serif;
-  font-size: 22px;
-  font-weight: 400;
+  font-family: Lato,serif;
   color: #000;
-  display: inherit;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 .content img {
