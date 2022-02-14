@@ -217,7 +217,7 @@ a:hover {
 .section-title {
   margin-bottom: 80px;
   font-family: Lato, sans-serif;
-  font-weight: 700;
+  /*font-weight: 700;*/
 }
 
 .bg-cover {
@@ -335,7 +335,7 @@ a:hover {
 
 .font-secondary {
   font-family: Lato, sans-serif;
-  font-weight: 700 !important;
+  /*font-weight: 700 !important;*/
 }
 
 .font-tertiary {
