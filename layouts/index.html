@@ -4,21 +4,6 @@
   <section class="hero-area bg-primary overflow-hidden" id="parallax">
     <div class="container">
       <div class="row">
-        <div class="col-lg-1">
-          <!-- social icon -->
-          <ul class="list-unstyled mt-3 position-relative zindex-1">
-            {{ range site.Params.social }}
-            <li class="mb-3">
-                <a class="text-dark" href="{{.URL | safeURL }}">
-                    <i class="{{.icon}}" aria-hidden="true">
-                    <span class="sr-only">{{.name}}</span>
-                    </i>
-                </a>
-            </li>
-            {{ end }}
-          </ul>
-          <!-- /social icon -->
-        </div>
         <div class="col-lg-11 mx-auto">
           <h1 class="text-dark font-secondary">{{ site.Data.homepage.banner.title | safeHTML }}</h1>
         </div>
@@ -51,6 +36,19 @@
     <div class="layer" id="l9">
       <img src="{{`images/illustrations/leaf-cyan-2.svg` | relURL}}" alt="bg-shape">
     </div>-->
+    <!-- social icon -->
+    <ul class="list-unstyled mt-3 position-relative zindex-1">
+      {{ range site.Params.social }}
+      <li class="mb-3">
+          <a class="text-dark" href="{{.URL | safeURL }}">
+              <i class="{{.icon}}" aria-hidden="true">
+              <span class="sr-only">{{.name}}</span>
+              </i>
+          </a>
+      </li>
+      {{ end }}
+    </ul>
+    <!-- /social icon -->
   </section>
   <!-- /hero area -->
 
