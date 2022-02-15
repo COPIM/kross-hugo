@@ -10,12 +10,12 @@ body {
   font-family: Lato, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
-  color: #4c4c4c
+  color: #000000
 }
 
 p {
   font-weight: 400;
-  color: #4c4c4c;
+  color: #000000;
   font-size: 15px;
   line-height: 1.8;
   font-family: Lato, sans-serif
@@ -262,7 +262,7 @@ a:hover {
 }
 
 .text-color {
-  color: #4c4c4c
+  color: #000000
 }
 
 .text-dark {
@@ -365,7 +365,7 @@ a:hover {
 }
 
 .icon-light {
-  color: #c8d5ef
+  color: var(--highlight-colour);
 }
 
 .slick-dots {
@@ -599,11 +599,11 @@ textarea.form-control {
 
 .active-bg-primary {
   transition: .3s ease;
-  background: var(--primary-color)
+  background: var(--light-highlight-colour)
 }
 
 .active-bg-primary * {
-  color: #fff
+  color: #000000
 }
 
 .hover-shadow {
@@ -948,7 +948,7 @@ summary {
 
 details {
   font-weight: 400;
-  color: #4c4c4c;
+  color: #000000;
   font-size: 15px;
   line-height: 1.8;
   font-family: Lato,sans-serif;
