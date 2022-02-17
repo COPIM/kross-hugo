@@ -104,6 +104,35 @@
   {{ end }}
   {{ end }}
 
+  {{ if site.Data.homepage.workpackage.enable }}
+  <!-- work packages -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">{{ site.Data.homepage.workpackage.title | markdownify }}</h2>
+        </div>
+      </div>
+      <div class="row shuffle-wrapper">
+        {{ $item:= site.Data.homepage.workpackage.item_show }}
+        {{ range first $item (where .Site.RegularPages "Section" "workpackage") }}
+        <div class="col-lg-4 col-6 mb-4 shuffle-item">
+          <div class="position-relative rounded hover-wrapper">
+            <img src="{{.Params.image | absURL }}" alt="{{.Params.image_alt_text}}" class="img-fluid rounded w-100 d-block">
+            <div class="hover-overlay">
+              <div class="hover-content">
+                <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">{{.Params.title}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <!-- /work packages -->
+  {{ end }}
+
   {{ if site.Data.homepage.outputs.enable }}
   {{ with site.Data.homepage.outputs }}
   <!-- outputs -->
@@ -189,36 +218,6 @@
   <!-- /education -->
   {{ end }}
   {{ end }}
-
-  {{ if site.Data.homepage.portfolio.enable }}
-  <!-- portfolio -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="section-title">{{ site.Data.homepage.portfolio.title | markdownify }}</h2>
-        </div>
-      </div>
-      <div class="row shuffle-wrapper">
-        {{ $item:= site.Data.homepage.portfolio.item_show }}
-        {{ range first $item (where .Site.RegularPages "Section" "portfolio") }}
-        <div class="col-lg-4 col-6 mb-4 shuffle-item">
-          <div class="position-relative rounded hover-wrapper">
-            <img src="{{.Params.image | absURL }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block">
-            <div class="hover-overlay">
-              <div class="hover-content">
-                <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">view project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-  <!-- /portfolio -->
-  {{ end }}
-
 
   {{ if site.Data.homepage.packages.enable }}
   {{ with site.Data.homepage.packages }}
