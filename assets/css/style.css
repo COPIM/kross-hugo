@@ -47,30 +47,30 @@ h1,
 
 h2,
 .h2 {
-  font-size: 60px
+  font-size: 45px
 }
 
 @media(max-width:991px) {
 
   h2,
   .h2 {
-    font-size: 50px
+    font-size: 35px
   }
 }
 
 h3,
 .h3 {
-  font-size: 40px
+  font-size: 22px
 }
 
 h4,
 .h4 {
-  font-size: 22px
+  font-size: 18px
 }
 
 h5,
 .h5 {
-  font-size: 18px
+  font-size: 14px
 }
 
 h6,
@@ -957,4 +957,21 @@ details {
 
 .dropdown-item.active, .dropdown-item:active {
   background-color: var(--highlight-colour);
+}
+
+a {
+  color: #0062F5;
+}
+
+blockquote a {
+  color: #005CE6;
+}
+
+.font-secondary {
+  font-family: Lato,sans-serif;
+  font-weight: 400!important;
+}
+
+.title {
+  font-size: 22px
 }
