@@ -616,6 +616,7 @@ textarea.form-control {
 
 .hover-wrapper {
   overflow: hidden
+  padding: 25px;
 }
 
 .hover-wrapper img {
