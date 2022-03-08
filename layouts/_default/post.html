@@ -6,7 +6,7 @@
     <div class="card-body" style="background-color:#ffcfa6;">
       <h3 class="card-title"><a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
       </h3>
-      <p class="card-text">{{.Summary}}</p>
+      <p class="card-text">{{.Summary | truncate 100}}</p>
       <a href="{{.Permalink}}" class="btn btn-sm btn-primary text-dark">Read More</a>
     </div>
   </article>
