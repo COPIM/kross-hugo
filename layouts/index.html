@@ -60,8 +60,8 @@
         <img src="/images/copim-header_lefted-slim.png" alt="text reading 'open access, open infrastructures.'" class="img-fluid rounded">
         <div class="col-lg-10 mx-auto text-left">
           {{ with site.Data.homepage.about }}
-          <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
-          <p class="font-secondary lead text-dark">{{.subcontent | markdownify}}</p>
+          <p class="light-paragraph font-secondary lead text-dark">{{.content | markdownify}}</p>
+          <p class="light-paragraph font-secondary lead text-dark">{{.subcontent | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
           <a href="{{ .URL | absURL }}" class="btn btn-transparent text-dark">{{.label}}</a>
@@ -197,6 +197,9 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-title">{{ .title | markdownify }}</h2>
+        </div>
+        <div class="col-lg-12 text-center">
+          <p class="light-paragraph section-title font-secondary lead text-dark">{{ .intro | markdownify }}</p>
         </div>
         {{ range .item }}
         <div class="col-lg-6 col-md-6 mb-80">

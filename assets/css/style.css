@@ -169,7 +169,7 @@ body {
 
 ol,
 ul {
-  list-style-type: circle;
+  /*list-style-type: circle;*/
   margin: 1rem;
 }
 
@@ -979,4 +979,9 @@ blockquote a {
 
 .footer-title {
   font-size: 18px
+}
+
+.light-paragraph {
+  font-family: Lato,sans-serif;
+  font-weight: 200!important;
 }
