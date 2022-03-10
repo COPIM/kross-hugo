@@ -412,7 +412,8 @@ textarea.form-control {
 }
 
 .card {
-  border: 0
+  border: 0;
+  height: 100%
 }
 
 .card-header {
