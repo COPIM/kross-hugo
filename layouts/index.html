@@ -54,6 +54,9 @@
 
   {{ if site.Data.homepage.about.enable }}
   <!-- about -->
+  <div class="col-12 text-center">
+    <div class="section-title">‏‏‎ ‎‎‎</div>
+  </div>
   <section class="section">
     <div class="container">
       <div class="row">
@@ -199,7 +202,7 @@
           <h2 class="section-title">{{ .title | markdownify }}</h2>
         </div>
         <div class="col-lg-12 text-center">
-          <p class="light-paragraph section-title font-secondary lead text-dark">{{ .intro | markdownify }}</p>
+          <p class="light-paragraph font-secondary lead text-dark">{{ .intro | markdownify }}</p>
         </div>
         {{ range .item }}
         <div class="col-lg-6 col-md-6 mb-80">
