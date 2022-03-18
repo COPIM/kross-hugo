@@ -1,7 +1,7 @@
 /*!------------------------------------------------------------------
 [MAIN STYLESHEET]
-PROJECT: Project Name
-VERSION: Versoin Number
+PROJECT: Copim website
+VERSION: 0.1
 -------------------------------------------------------------------*/
 @import "https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap";
 
@@ -994,4 +994,23 @@ blockquote a {
 
 h2 {
   background: linear-gradient(90deg, var(--highlight-colour), var(--light-highlight-colour)) no-repeat left 123%/98% 45%;
+}
+
+table{
+    width:100%;
+    margin-bottom:1rem;
+    color:#212529
+}
+table td,.table th{
+    padding:.75rem;
+    vertical-align:top;
+    border-top:1px solid #dee2e6
+}
+table thead th{
+    text-align:center;
+    vertical-align:bottom;
+    border-bottom:2px solid #dee2e6
+}
+table tbody+tbody{
+    border-top:2px solid #dee2e6
 }
