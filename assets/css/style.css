@@ -133,6 +133,28 @@ h6,
   box-shadow: none !important
 }
 
+#learn-btn {
+  background: var(--light-highlight-colour);
+}
+
+#learn-btn.active {
+  opacity: .8;
+}
+
+#learn-btn:active {
+  background: var(--light-highlight-colour) !important
+}
+
+#learn-btn:hover {
+  background: var(--light-highlight-colour)
+}
+
+#learn-btn.focus,
+#learn-btn.active {
+  background: var(--light-highlight-colour) !important;
+  box-shadow: none !important
+}
+
 .btn-transparent {
   background: transparent;
   color: var(--primary-color);
@@ -841,7 +863,7 @@ blockquote {
 }
 
 .page-title {
-  padding: 250px 0 150px
+  padding: 250px 0 25px
 }
 
 .page-title .container {
@@ -1013,4 +1035,8 @@ table thead th{
 }
 table tbody+tbody{
     border-top:2px solid #dee2e6
+}
+
+#card-image{
+  max-height:75px;
 }

@@ -60,14 +60,16 @@
   <section class="section">
     <div class="container">
       <div class="row">
-        <img src="/images/copim-header_lefted-slim.png" alt="text reading 'open access, open infrastructures.'" class="img-fluid rounded">
         <div class="col-lg-10 mx-auto text-left">
+          <img src="/images/copim-header_lefted-slim.png" alt="text reading 'open access, open infrastructures.'" class="img-fluid rounded">
           {{ with site.Data.homepage.about }}
           <p class="light-paragraph font-secondary lead text-dark">{{.content | markdownify}}</p>
           <p class="light-paragraph font-secondary lead text-dark">{{.subcontent | markdownify}}</p>
           {{ if .button.enable }}
           {{ with .button }}
-          <a href="{{ .URL | absURL }}" class="btn btn-transparent text-dark">{{.label}}</a>
+          <div class="d-flex justify-content-center">
+            <a href="{{ .URL | absURL }}" id="learn-btn" class="btn text-dark">{{.label}}</a>
+          </div>
           {{ end }}
           {{ end }}
           {{ end }}
@@ -152,7 +154,7 @@
           <div class="card {{if .highlighted }} active-bg-primary {{end}} hover-shadow shadow">
             <div class="card-body text-center px-4 py-5">
               <a href="{{.url}}">
-                <img class="img-fluid" src="{{.logo | relURL }}" alt="{{.title}} logo">
+                <img id="card-image" class="img-fluid" src="{{.logo | relURL }}" alt="{{.title}} logo">
               </a>
               <h3 class="mb-4">{{.title}}</h3>
               <p>{{.content | markdownify}}</p>
