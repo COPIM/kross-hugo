@@ -1040,3 +1040,21 @@ table tbody+tbody{
 #card-image{
   max-height:75px;
 }
+
+.hover-logos {
+  padding: 5px;
+}
+
+.hover-logos img {
+  transition: .3s ease;
+  transform: scale(1.1)
+}
+
+.hover-logos:hover img {
+  transform: scale(1)
+}
+
+.hover-logos:hover .hover-overlay {
+  opacity: 1;
+  visibility: visible
+}
