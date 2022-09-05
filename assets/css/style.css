@@ -1058,3 +1058,23 @@ table tbody+tbody{
   opacity: 1;
   visibility: visible
 }
+
+img.onion {
+  max-width: 5%;
+  filter: invert(61%) sepia(63%) saturate(9%) hue-rotate(43deg) brightness(90%) contrast(88%);
+}
+
+@media (min-width: 769px) {
+  .onion {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .onion {
+    text-align: center;
+  }
+  img.onion {
+    max-width: 10%;
+  }
+}
